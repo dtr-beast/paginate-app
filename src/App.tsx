@@ -4,9 +4,11 @@ import ReactPaginate from 'react-paginate';
 import Image1 from './assets/im1.jpg'
 import Image2 from './assets/im2.jfif'
 import Image3 from './assets/im3.jpg'
+import Image4 from './assets/im4.jfif'
+import Image5 from './assets/im5.jpg'
 
 export default function App() {
-  const [images, setImages] = useState([Image1, Image2, Image3])
+  const [images, setImages] = useState([Image1, Image2, Image3, Image4, Image5])
   const [currentImage, setCurrentImage] = useState(images[0])
 
   const [pageCount, setPageCount] = useState(images.length)
@@ -18,22 +20,15 @@ export default function App() {
   }
   return (
     <div className="App">
-      <div>
-        <img src={currentImage} alt="" width="600px" />
-      </div>
-      <div>
-        <ReactPaginate
-          containerClassName="paginate"
-          activeClassName="activePage"
-          pageClassName="pageClassName"
-          onPageChange={handlePageClick}
-          pageRangeDisplayed={5}
-          pageCount={pageCount}
-        />
-      </div>
-
+      <img src={currentImage} alt="" width={600} height={400} />
+      <ReactPaginate
+        containerClassName="paginate"
+        activeClassName="activePage"
+        pageClassName="pageClassName"
+        onPageChange={handlePageClick}
+        pageRangeDisplayed={5}
+        pageCount={pageCount}
+      />
     </div>
   )
 }
-
-
