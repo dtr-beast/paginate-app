@@ -24,7 +24,7 @@ export default function App() {
       <ReactPaginate
         containerClassName="paginate"
         activeClassName="activePage"
-        pageClassName="pageClassName"
+        pageClassName="page"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
