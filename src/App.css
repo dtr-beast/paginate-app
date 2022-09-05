@@ -1,0 +1,29 @@
+#root {
+  min-width: fit-content;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.paginate {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.activePage {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.pageClassName {
+  list-style-type: none;
+  border: 1px solid black;
+  padding: 3px 10px;
+}
+
+.activePage a {
+  color: white;
+}
